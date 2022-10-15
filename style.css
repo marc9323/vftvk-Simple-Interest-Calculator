@@ -23,14 +23,15 @@ h1{
     left: 50%;
     border-radius: 25px;
     padding: 20px;
-    /* align-items: center; */
-    /* text-align: center; */
+}
 
+#result {
+    display: none;
 }
 
 #wrapInputs {
-    /* text-align: center; */
-    align-items: center;
+ 
+    margin-left: 2vw;
 }
 
 label {

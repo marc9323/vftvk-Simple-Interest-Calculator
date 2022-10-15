@@ -51,6 +51,18 @@ function compute()
     principal.innerHTML = principal;
     projectedYear.innerHTML = getProjectedYear(years);
 
+    showOrHideResults();
+
+}
+
+// toggles the display style on result div to show/hide
+function showOrHideResults() {
+    var resultsDiv = document.getElementById("result");
+    if(resultsDiv.style.display == "none") {
+        resultsDiv.style.display = "block";
+    } else {
+        resultsDiv.style.display = "none";
+    }
 }
 
 // takes the number of years entered on the form and performs necessary
