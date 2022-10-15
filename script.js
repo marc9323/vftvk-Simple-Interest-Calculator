@@ -43,6 +43,7 @@ function compute()
 
     if(principal <= 0 || principal == "") {
         alert("Principal must be a positive value.");
+        document.getElementById("principal").focus();
         return;
     }
     
