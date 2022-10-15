@@ -14,7 +14,7 @@ Title:  Simple Interest Calculator, calculates interest accrued over time.
 // bind the deposit and interest rate fields displayed at bottom of app
 (function() {
     document.getElementById("result").style.display = "none";
-    
+
     let slider = document.getElementById("rate");
     let interestRateDisplay = document.getElementById("interestRateDisplay");
     let interestRateBottomDisplay = document.getElementById("interestRate");
@@ -39,7 +39,12 @@ Title:  Simple Interest Calculator, calculates interest accrued over time.
 // resultant total amount and year fields are populated on compute
 function compute()
 {
-    let principal= document.getElementById("principal").value;
+    let principal = document.getElementById("principal").value;
+
+    if(principal <= 0 || principal == "") {
+        alert("Principal must be a positive value.");
+        return;
+    }
     
     let rate = document.getElementById("rate").value;
     let interestRateDisplay = document.getElementById("interestRateDisplay"); // the span
