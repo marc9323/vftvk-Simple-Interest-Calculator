@@ -1,16 +1,54 @@
+<!-- 
+
+/*
+Author:  Marc D. Holman
+For:  Introduction to Cloud Development with HTML5, CSS, and Javascript
+Date:  10 / 15 / 2022
+
+Title:  Simple Interest Calculator, calculates interest accrued over time.
+*/
+
+ -->
+
 <html>
     <head>
-    <script src="script.js"></script>
+    
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class="container">
+            <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+            <div id="wrapInputs">
+            <label for="principal">Amount</label>
+            <input type="number"  id="principal" name="principal" placeholder="000">  
+            <br />
+            <label for="rate">Interest Rate</label>
+            <input type="range" id="rate" name="rate" min="0.0" max="100.00" step="0.01" class="slider">
+            <span id="interestRateDisplay">0.0</span>
+            <br />
+            <label for="years">No. of Years</label>
+            <input type="number" id="years" name="years" size="3">  <br />
+            </div>
+            <br />
+            <button onclick="compute()">Compute Interest</button>
+            <br /><br />
+            <div id="result">
+                <p>If you deposit <span id="amount"></span>,</p>
+                <p>at an interest rate of <span id="interestRate"></span>.</p>
+                <p>You will receive an amount of $ <span id="totalAmount"></span>,</p>
+                <p>in the year <span id="projectedYear"></span></p>
+            </div>
+            <br />
+            <p>&copy;<strong>Everyone Can Get Rich</strong></p>
+        </div>
+        <br />
     </body>
+    <script src="script.js"></script>
 </html>
+
+
+<!-- 
+    Github Pages URL:
+    https://marc9323.github.io/vftvk-Simple-Interest-Calculator/
+ -->
